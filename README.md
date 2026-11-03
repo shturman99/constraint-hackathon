@@ -13,6 +13,7 @@ periodic box `[0, 2pi)^3`; all derivatives use the Pencil Code sixth-order first
 | `kit/level2.py` | Level 2: snapshot loader, 48 cube symmetries + shifts, corruptions (gradient noise, regrid, truncation), spectrum and current-sheet metrics |
 | `kit/evaluate.py` | evaluator: `python -m kit.evaluate <submission> --level 1|2 [--data DIR] [--n 32]` |
 | `data_prep/extract_level2.py` | Pencil 512^3 snapshots -> N^3 npz (spectral restriction of A, B = D x A); runs where the snapshots live |
+| `data_prep/pencil_random_fields.py` | Pencil `power_randomphase_hel` fields (start.x only) -> npz with `u`, `leray(u)`, `B = D x A`; checks the slope against `kit/fields.py` |
 | `examples/` | `sub_stencil` (a real entry), `sub_identity` (must fail), `sub_fft_cheat` (must be rejected) |
 | `tests/` | float64 validation: `uv run python -m pytest tests` |
 

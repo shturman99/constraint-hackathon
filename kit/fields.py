@@ -1,8 +1,9 @@
 """Level 1 field generator.
 
 `slope` is the exponent of the per-mode power, |u_hat(k)|^2 ~ |k|^-slope, so slope 0 is white noise as
-in the brief. (Open point: a shell spectrum E(k) ~ k^-5/3 corresponds to a per-mode slope 11/3, so the
-brief's "5/3, Kolmogorov-like" family is only Kolmogorov-like if slope means the shell spectrum.)
+in the brief. The "kolmogorov" family keeps the per-mode slope 5/3 (decision 2026-11-03), i.e. a shell
+spectrum E(k) ~ k^(1/3); a true shell k^-5/3 would be per-mode 11/3. Pencil's power_randomphase_hel gives
+the same fields with initpower = 2 - slope (data_prep/pencil_random_fields.py).
 """
 import torch
 
