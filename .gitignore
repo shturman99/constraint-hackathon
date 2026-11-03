@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# Data are distributed separately
+data/
+*.npz
+
+# Evaluator output
+**/report_level*.json

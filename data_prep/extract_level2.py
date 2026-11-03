@@ -1,4 +1,4 @@
-"""Level 2 data from existing 512^3 Pencil snapshots (runs on Vera; Python 3.7 + numpy + pencil).
+"""Level 2 data from existing 512^3 Pencil snapshots (Python 3.7+ with numpy and the Pencil Code Python package).
 
 For each snapshot: read A, restrict it spectrally to N^3 (modes |k_i| < N/2, phase-corrected for the
 cell-centred grid), compute B = D x A with the official sixth-order stencil (so D.B = 0 to round-off
@@ -13,7 +13,7 @@ import sys
 import numpy as np
 
 for _p in (os.path.join(os.environ.get("PENCIL_HOME", ""), "python"),
-           "/hildafs/projects/phy210003p/murman/pencil-code/python", os.path.expanduser("~/pencil-code/python")):
+           os.path.expanduser("~/pencil-code/python")):
     if os.path.isdir(_p):
         sys.path.insert(0, _p)
         break
